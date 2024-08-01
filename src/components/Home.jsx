@@ -26,7 +26,7 @@ function Home() {
                         <div className="spot"></div>
                         <div className="tuto">
                             <h1>350+</h1>
-                            <p>Video tutorial</p>
+                            <p>Video</p>
                         </div>
 
                     </div>
