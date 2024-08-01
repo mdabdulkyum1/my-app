@@ -1,0 +1,155 @@
+:root {
+    --bg: black;
+    --primary: #e6533c;
+    --secondary: #6e5d5d;
+    --light: #7a7b7b;
+}
+.d-flex {
+    display: flex;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 19px 52px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.col {
+    width: 50%;
+}
+
+/* Header css */
+.header {
+    padding: 3rem 0;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(rgb(5, 4, 4), rgb(10, 7, 7));
+}
+
+/* navbar css */
+.nav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+
+.nav ul {
+    align-items: center;
+    gap: 42px;
+    border: 1px solid #3a3939;
+    border-radius: 30px;
+    padding: 9px 5px;
+    padding-right: 20px;
+}
+
+.active-btn {
+    background-color: var(--primary);
+    font-weight: 900;
+    padding: 7px 22px;
+    border-radius: 20px;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* banner styles */
+.banner {
+    align-items: center;
+    margin-top: 65px;
+}
+
+/* .banner-content{} */
+.banner-content h1 {
+    color: var(--secondary);
+    font-size: 6.5rem;
+    line-height: 120px;
+    text-shadow: 250px 0px 60px rgba(82, 82, 82, 0.652);
+}
+
+.font-i {
+    font-family: "Miama", sans-serif;
+    font-weight: normal;
+    font-size:12rem;
+}
+
+.banner-content p {
+    color: var(--light);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 30px 0;
+    width: 95%;
+}
+
+.banner-content .banner-btn {
+    gap: 10px;
+}
+
+.for-m {
+    display: none;
+}
+
+.banner-content .banner-btn .btn-2 {
+    background-color: transparent;
+    color: var(--secondary);
+    padding: 19px 52px;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+}
+
+.banner .banner-img {
+    text-align: right;
+    position: relative;
+}
+
+.wrk-out {
+    position: absolute;
+    height: 100ox;
+    width: 210px;
+    background-color: rgba(53, 53, 53, 0.706);
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.free-work {
+    top: 124px;
+    right: -80px;
+}
+
+.free-work h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+
+
+.video-tuto {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    left: 179px;
+    bottom: 65px;
+    background-color: #232323df;
+    border: 1px solid #535353;
+}
+
+.video-tuto .spot {
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
