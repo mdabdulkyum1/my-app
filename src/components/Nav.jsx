@@ -1,19 +1,39 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Nav.css';  // Assuming you have custom styles in Nav.css
+import './Nav.css'; // Optional: For additional custom styling
 
 function Nav() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
     return (
-        <nav className="bg-green-200 p-4 flex justify-between items-center">
-            <div className="flex items-center space-x-4">
+        <nav className="bg-navyblue text-white p-4">
+            <div className="max-w-6xl mx-auto flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-black text-2xl font-bold">Md Abdul Kyum</div>
-            </div>
-            <ul className="flex space-x-4">
+                <div className="text-2xl font-bold">
+                    <Link to="/">Md Abdul Kyum</Link>
+                </div>
+
+                {/* Hamburger Icon */}
+                <button 
+                    className="lg:hidden text-white focus:outline-none" 
+                    onClick={toggleMenu}
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
                 {/* Menu Items */}
-                <li><Link to="/" className="text-red-700 text-2xl hover:text-red-900">Home</Link></li>
-                <li><Link to="/about" className="text-red-700 text-2xl hover:text-red-900">About</Link></li>
-                {/* Add more menu items as needed */}
-            </ul>
+                <div className={`lg:flex lg:items-center ${isOpen ? 'block' : 'hidden'}`}>
+                    <ul className="flex flex-col lg:flex-row lg:space-x-6">
+                        <li><Link to="/" className="block py-2 px-4 text-white hover:bg-skyblue">Home</Link></li>
+                        <li><Link to="/about" className="block py-2 px-4 text-white hover:bg-skyblue">About</Link></li>
+                        {/* Add more menu items as needed */}
+                    </ul>
+                </div>
+            </div>
         </nav>
     );
 }

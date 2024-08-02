@@ -1,3 +1,15 @@
-.Nav{
-    background-color: green;
+.bg-navy-blue {
+    background-color: #1E3A8A;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-sky-blue {
+    color: #60A5FA;
+}
+
+.hover\:text-golden-yellow:hover {
+    color: #FBBF24;
 }
