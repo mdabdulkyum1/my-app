@@ -4,32 +4,15 @@ function Home() {
     return(
         <>
             
-            <div className="banner d-flex">
-            <div className="col">
-                <div className="banner-content">
-                    <h1>Get body in <span className="font-i">shape</span> & stay healthy</h1>
-                    <p>Join us to transform your fitness journey. Discover expert workouts, nutrition tips, and wellness advice tailored to help you achieve a healthier, stronger, and more vibrant you.</p>
-                    <div className="banner-btn d-flex">
-                        <button className="btn-primary for-d">Join Club Now!</button>
-                        <button className="btn-primary for-m">Join Now!</button>
-                        <button className="btn-2">Download App</button>
-                    </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="banner-img">
-                    <div classNameName="free-work wrk-out">
-                        <h1>500+</h1>
-                        <p>Free Workout Videos</p>
-                    </div>
-                    <div className="video-tuto wrk-out d-flex">
-                        <div className="spot"></div>
-                        <div className="tuto">
-                            <h1>350+</h1>
-                            <p>Video</p>
-                        </div>
-
-                    </div>
+            <div className="relative bg-cover bg-center h-96" style={{ backgroundImage: "url('/path/to/your/banner-image.jpg')" }}>
+            <div className="absolute inset-0 bg-gray-900 opacity-60"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white">
+                    <h1 className="text-5xl font-bold mb-4">Welcome to My Portfolio</h1>
+                    <p className="text-xl mb-8">Explore my work and projects</p>
+                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                        Get Started
+                    </button>
                 </div>
             </div>
         </div>
