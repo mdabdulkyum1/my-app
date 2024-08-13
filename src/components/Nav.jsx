@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css'; // Optional: For additional custom styling
 
+
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="bg-navyblue text-white p-4">
+        <>
+           <nav className="bg-navyblue text-white p-4">
             <div className="max-w-6xl mx-auto flex justify-between items-center">
                 {/* Logo */}
                 <div className="text-2xl font-bold">
@@ -35,6 +37,8 @@ function Nav() {
                 </div>
             </div>
         </nav>
+
+        </>
     );
 }
 

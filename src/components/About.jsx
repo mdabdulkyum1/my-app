@@ -1,45 +1,9 @@
 import React, { useState } from 'react';
+import ContactForm from './ContactForm';
+
 
 function About() {
-    // State to manage form data
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
-
-    // State to manage form submission status
-    const [formStatus, setFormStatus] = useState('');
-
-    // Handle form input changes
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    // Handle form submission
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        // Here you would typically send the form data to a backend service
-        // Example using fetch (replace with your own endpoint):
-        fetch('https://your-backend-endpoint.com/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                setFormStatus('Message sent successfully!');
-                setFormData({ name: '', email: '', message: '' }); // Reset form
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                setFormStatus('Failed to send message. Please try again later.');
-            });
-    };
+   
 
     return (
         <>
@@ -89,64 +53,10 @@ function About() {
                                 </a>
                             </li>
                         </ul>
-
-                        {/* Contact Form */}
-                        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto">
-                            <div className="mb-4">
-                                <label className="block text-navyblue text-sm font-bold mb-2" htmlFor="name">
-                                    Name
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-navyblue leading-tight focus:outline-none focus:shadow-outline"
-                                    required
-                                />
-                            </div>
-                            <div className="mb-4">
-                                <label className="block text-navyblue text-sm font-bold mb-2" htmlFor="email">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-navyblue leading-tight focus:outline-none focus:shadow-outline"
-                                    required
-                                />
-                            </div>
-                            <div className="mb-6">
-                                <label className="block text-navyblue text-sm font-bold mb-2" htmlFor="message">
-                                    Message
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-navyblue leading-tight focus:outline-none focus:shadow-outline"
-                                    rows="4"
-                                    required
-                                />
-                            </div>
-                            <div className="flex items-center justify-between">
-                                <button
-                                    type="submit"
-                                    className="bg-navyblue hover:bg-skyblue text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                >
-                                    Send Message
-                                </button>
-                            </div>
-                            {formStatus && <p className="mt-4 text-skyblue">{formStatus}</p>}
-                        </form>
                     </section>
                 </div>
             </div>
+            <ContactForm/>
         </>
     );
 }
